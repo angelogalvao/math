@@ -17,6 +17,7 @@ Here I will play aroung some cool matrices. Here is the list:
 
 - Differece Matrix
 - Running sum
+- Rotation Matrix
 "
 
 # ╔═╡ 3237deda-f46a-4324-83bf-b8e44301c61a
@@ -141,7 +142,7 @@ let
 	θ = π / 2
 	
 	# Construct the 2D rotation matrix
-	R = [cos(θ) -sin(θ);
+	R = [cos(θ) -sin(θ)
 	     sin(θ)  cos(θ)]
 
 	# Original vector
@@ -149,6 +150,9 @@ let
 
 	# Rotated vector
 	v_rotated = R * v
+
+	println("Rotated Matrix:")
+	println(v_rotated)
 
 	plt = plot(
 		[0, v[1]], [0, v[2]],
